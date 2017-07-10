@@ -1,10 +1,47 @@
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/imgs/favicon.ico" />
+  <!-- dependencies -->
+  <script type="text/javascript" src="{{ site.baseurl }}/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/Tone.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/socket.io.js"></script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
+       <script type="text/javascript" src="/js/jquery.unveil.min.js" defer></script> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/tachyons.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/colors.css">
+  <!-- helper functions -->
+  <!-- <script type="text/javascript" src="{{ site.baseurl }}/js/webscope.js"></script> -->
+  <script type="text/javascript" src="{{ site.baseurl }}/js/mavg.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/ui.js"></script>
+  <!-- code -->
+  <script type="text/javascript" src="{{ site.baseurl }}/js/instruments.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/script.js"></script>
+  <style>
+   /* default font */
+   @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+   .noto { font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif; }
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+   /* flex layout fine control */
+
+   /* mobile-sized < 600px */
+
+   .flex-half {
+     -webkit-box-flex: 1;
+     -ms-flex: 1 1 auto;
+     flex: 1 1 0;
+     min-width: 0; /* 1 */
+     min-height: 0; /* 1 */
+   }
+   
+   @media all and (min-width: 600px) { /* tablet-sized > 600px */
+     .aside { flex: 1 auto; }
+   }
+
+   @media all and (min-width: 800px) { /* full-scaled > 800px */
+     .main { flex: 3 0px; }
+   }
+  </style>
 </head>

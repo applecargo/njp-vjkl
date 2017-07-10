@@ -1,0 +1,9 @@
+<div class="btn dib {{include.bgclr}} br-pill pa1 grow ph3" data-bgclr="{{include.bgclr}}" data-actclr="{{include.actclr}}" data-cbclk="{{include.cbclk}}">
+  <a href="{{include.href}}" class="{{include.fgclr}} no-underline">
+    {% capture fa %}{{include.fa}}{% endcapture %}
+    {% if fa != "" %}
+    <i class="db fa fa-check f3"></i>
+    {% endif %}
+    <span class="db f3 b">{{include.text}}</span>
+  </a>
+</div>
